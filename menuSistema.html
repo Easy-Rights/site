@@ -4,7 +4,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height:65px;
+    height:70px;
     
 }
 
@@ -12,23 +12,68 @@ li {
     float: left;
 }
 
-li a {
-    display: block;
+li a, .dropbtn {
+    display: inline-block;
     color: blue;
     text-align: center;
-    padding: 25px 15px;
+    padding: 25px 16px;
     text-decoration: none;
 }
 
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}   
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 30 px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 </style>
 
 <div class="header">
 	<ul >
-  		<li><img src="img/logo.jpeg" title="Chave de Identificação" height="65px" width="65px" ></li>
-        <li role="presentation" ><a href="financas.html">Finanças</a></li>
-  		<li role="presentation" class="active" ><a href="usuarios.html">Usuários</a></li> 
-        <li role="presentation" class="active" ><a href="apresentacao.html">Apresentacao</a></li>       
+  		<li><img src="img/logo.jpeg" title="Bem Vindo ao EasyRights!" height="70px" width="70px" ></li>
+        <li class="dropdown" role="presentation" title="Finanças do sistema">
+            <a href="financas.html" class="dropbtn">Finanças</a>
+            <div class="dropdown-content">
+                <a href="#">Clientes</a>
+                <a href="#">Preços</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Rendimento</a>
+            </div>
+        </li>
+        <li class="dropdown" role="presentation" title="Controle dos usuários do sistema">
+            <a href="usuarios.html" class="dropbtn">Usuários</a>
+            <div class="dropdown-content">
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </li>
+  		 <li class="dropdown" role="presentation" title="Apresentação do sistema">
+            <a href="apresentacao.html" class="dropbtn">Apresentacao</a>
+            <div class="dropdown-content">
+                <a href="login.html">Login</a>
+            </div>
+        </li>      
 	</ul>
     <hr>
 </div>
