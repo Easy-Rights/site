@@ -93,3 +93,75 @@
 .panel-lgreen > a:hover {
   color: #53c653;
 }
+
+
+.panel-lpurple {
+  border-color: #c653c6;
+}
+.panel-lpurple > .panel-heading {
+  border-color: #c653c6;
+  color: white;
+  background-color: #c653c6;
+}
+.panel-lpurple > a {
+  color: #c653c6;
+}
+.panel-lpurple > a:hover {
+  color: #ac39ac;
+}
+
+
+.panel-dpurple {
+  border-color: #732673;
+}
+.panel-dpurple > .panel-heading {
+  border-color: #732673;
+  color: white;
+  background-color: #732673;
+}
+.panel-dpurple > a {
+  color: #732673;
+}
+.panel-dpurple > a:hover {
+  color: #4d194d;
+}
+
+
+
+.panel-lturquoise {
+  border-color: #4dd2ff;
+}
+.panel-lturquoise > .panel-heading {
+  border-color: #4dd2ff;
+  color: white;
+  background-color: #4dd2ff;
+}
+.panel-lturquoise > a {
+  color: #4dd2ff;
+}
+.panel-lturquoise > a:hover {
+  color: #1ac6ff;
+}
+
+.panel-dturquoise {
+  border-color: #00ace6;
+}
+.panel-dturquoise > .panel-heading {
+  border-color: #00ace6;
+  color: white;
+  background-color: #00ace6;
+}
+.panel-dturquoise > a {
+  color: #00ace6;
+}
+.panel-dturquoise > a:hover {
+  color: #0086b3;
+}
+.label-cadastros {
+  color:#ff0000;
+}
+
+
+.addon-background{
+  background-color:#4dd2ff;
+}
