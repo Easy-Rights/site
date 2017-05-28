@@ -165,3 +165,7 @@
 .addon-background{
   background-color:#4dd2ff;
 }
+
+.disabled{ 
+	color: #b8b894;
+}
