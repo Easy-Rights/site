@@ -147,7 +147,6 @@
                                                     </span>
                                                 <!-- </span> -->
                                                 <select class="form-control">
-                                                    <option>Amancebado</option>
                                                     <option>Casado</option>
                                                     <option>Divorciado</option>
                                                     <option>Solteiro</option>
@@ -202,12 +201,7 @@
                                                     <span class="fa fa-plus"></span>
                                                 </span>
                                                 <select class="form-control">
-                                                    <option>Teresina</option>
-                                                    <option>Cidade verde</option>
-                                                    <option>Picos</option>
-                                                    <option>Cidade modelo</option>
-                                                    <option>Campo grande</option>
-                                                    <option>Terra do caju</option>
+
                                                 </select>
                                             </div>
                                         </div>

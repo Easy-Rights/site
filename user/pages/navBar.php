@@ -53,7 +53,7 @@
                                     <a href="#"> <i class="fa fa-user fa-fw"> </i> Contatos </a>
                                 </li>
                                 <li>
-                                    <a href="#"> <i class="fa fa-briefcase fa-fw"></i> Pesquisa </a>
+                                    <a href="#"> <i class="fa fa-search fa-fw"></i> Pesquisa </a>
                                 </li>
 
                             </ul>
