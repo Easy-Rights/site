@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Usuarios EasyRights</title>
 
-    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
     
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>	
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
 
-	<!-- Bootstrap Date-Picker Plugin -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	
 
 
   <script>
@@ -54,9 +53,13 @@
                         		<td>vitorgodeiro@live.com</td>
                         		<td>Escritório Justiça</td>			
 	                            <td> 
-	                            	<button id="botaoVisualizar" class="btn btn-default btn-sm glyphicon glyphicon-eye-open" type="submit" title="Visualizar informações do usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button>
-                                	<button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                	<button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover usuário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
+	                            	<button id="botaoVisualizar" class="btn btn-default btn-sm glyphicon glyphicon-eye-open" title="Visualizar informações do usuário" aria-hidden="true" ></button>
+                                	<button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir" data-id='2'></button> 
+                                		
+
+                                	<button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover usuário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="teste" data-id='teste'></button>
+
+                                	
                         		</td>
                     		</tr>
   
@@ -90,8 +93,8 @@
                                 <input type="text" class="form-control" id="login" name="login">
                             </div>
                             <div class="form-group">
-                            	<label for="senha" class="control-label">Data:</label><br>
-                                <input type="text" id="datepicker">
+                            	<label for="senha" class="control-label">Senha</label><br>
+                                <input type="text" id="senha">
     
                             </div>
                         </div>
@@ -104,8 +107,9 @@
                 </form>
           </div>
         </div>		
+
         <div class="modal fade bs-example-modal-sm" id="modalRemover" tabindex="-1" role="dialog" aria-labelledby="modalRemover" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
+          	<div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <form id="formRemoverUsuario" formmethod="post">                                
                         <div class="modal-header alert-warning">
@@ -115,14 +119,16 @@
                         <div class="modal-body" id="mensagemConfirmacaoRemover">
                             Realmente deseja remover o usuário XXXX ?					
                         </div>
+                        <input type="hidden" name="id" id="idRemover">
+                        <input type="hidden" name="retorno" id="retorno" value="<?php echo $retorno ?>">
                     </form>
                     <div class="modal-footer">
-                        <input type="hidden" name="id" id="id">
-                        <button type="submit" class="btn btn-warning" formaction="controle.php" name='action' id='removerUsuario' value='removerUsuario' formmethod="POST" form="formRemoverUsuario">Remover</button>
+                        
+                        <button type="submit" class="btn btn-warning" formaction="controleUsuario.php" name='action' id='removerUsuario' value='removerUsuario' formmethod="POST" form="formRemoverUsuario">Remover</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                     </div>                    
                 </div>
-          </div>
+          	</div>
         </div>
         
     </div>
@@ -179,19 +185,14 @@ w3IncludeHTML();
             }           
         });
         
-        $('#modalRemover').on('show.bs.modal', function (event) {
+      $('#modalRemover').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var idBotao = button.data('id'); // Extract info from data-* attributes
-            var id = document.getElementById('id');
+            var id = document.getElementById('idRemover');
             id.value = idBotao;
-            
             var mensagem = document.getElementById('mensagemConfirmacaoRemover');
             mensagem.innerHTML = "Realmente deseja remover o usuário <strong>" + button.data('nome') + "</strong>?";
-        })         
-
-            $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii"
-    });
+        })              
     </script>
 
 </html>	
