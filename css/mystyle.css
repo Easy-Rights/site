@@ -169,3 +169,11 @@
 .disabled{ 
 	color: #b8b894;
 }
+
+.inputOnLine{
+  display: inline;
+}
+
+.inputOnLine , .form-control{
+  display: inline;
+}

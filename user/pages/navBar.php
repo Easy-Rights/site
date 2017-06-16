@@ -44,7 +44,7 @@
                             <a href="#">Serviços<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                   <a href="#"> <i class="fa fa-building fa-fw"></i> Andamento Processual </a>
+                                   <a href="andProcessual.php"> <i class="fa fa-building fa-fw"></i> Andamento Processual </a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-users fa-fw"> </i>  Agenda de compromissos </a>
