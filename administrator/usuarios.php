@@ -3,21 +3,19 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EasyRights Adiministração - Preços</title>
+	<title>Usuarios EasyRights</title>
 
     <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
     
     <script src="../js/jquery-1.11.2.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-	<script src="https://www.w3schools.com/lib/w3data.js"></script>
-	
+    <script src="../js/bootstrap.min.js"></script>	
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 	<!-- Bootstrap Date-Picker Plugin -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
 
 
   <script>
@@ -28,67 +26,39 @@
 
 </head>
 <body>
-	<header>
-		<div w3-include-html="menuSistema.html"></div> 
- 	</header>
+    <?php
+       include 'menuSistema.html';
+    ?>
 	
 	<article>
 		<div class="container theme-showcase" role="main">
-        	<h1>Preços &nbsp <button id="botaoIncluir" class="btn btn-default btn-sm" type="submit" title="Adicionar usuário" data-toggle="modal" data-target="#modalInserir">adicionar</button></h1>
+        	<h1>Usuários &nbsp <button id="botaoIncluir" class="btn btn-default btn-sm" type="submit" title="Adicionar usuário" data-toggle="modal" data-target="#modalInserir">adicionar</button></h1>
 			<br>
 				<div class="table-responsive">		
             		<table class="table table-hover">
                 		<thead>
                     		<tr>
                       			<th>#</th>
-                      			<th>Plano</th>
-                      			<th>Preço</th>
-                      			<th>Número de Clientes</th>
+                      			<th>nome</th>
+                      			<th>cpf/cnpj</th>
+                      			<th>e-mail</th>
+                      			<th>instituição</th>
                       			<th>ações</th>
                     		</tr>
                 		</thead>
                 		<tbody>
                         	<tr>
                             	<th scope="row">1</th>
-                        		<td>Básica</td>
-                        		<td>9.99</td>
-                        		<td>14</td>
-                        					
+                        		<td>Vítor Godeiro</td>
+                        		<td>074.467.314-35</td>
+                        		<td>vitorgodeiro@live.com</td>
+                        		<td>Escritório Justiça</td>			
 	                            <td> 
-                                	<button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar preço" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                	<button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover preço" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
+	                            	<button id="botaoVisualizar" class="btn btn-default btn-sm glyphicon glyphicon-eye-open" type="submit" title="Visualizar informações do usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button>
+                                	<button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
+                                	<button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover usuário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
                         		</td>
                     		</tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Intermediária</td>
-                                <td>29.99</td>
-                                <td>35</td> 
-                                <td> 
-                                    <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar preço" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                    <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover preço" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Profissional</td>
-                                <td>49.99</td>
-                                <td>144</td>     
-                                <td> 
-                                    <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar preço" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                    <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover preço" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Especial</td>
-                                <td>99.99</td>
-                                <td>6</td>         
-                                <td> 
-                                    <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar preço" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                    <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover preço" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
-                                </td>
-                            </tr>
   
                 </tbody>
             </table>  
@@ -100,7 +70,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="modalTitulo">Novo plano</h4>
+                            <h4 class="modal-title" id="modalTitulo">Novo usuário</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
@@ -108,10 +78,22 @@
                                 <input type="text" class="form-control" id="nome" name="nome">
                             </div>
                             <div class="form-group">
-                                <label for="instituicao" class="control-label">Preço:</label>
+                                <label for="instituicao" class="control-label">Instituição:</label>
                                 <input type="text" class="form-control" id="instituicao" name="instituicao">
                             </div>
-                            
+                            <div class="form-group">
+                                <label for="email" class="control-label">E-mail:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login" class="control-label">Cpf/Cnpj:</label>
+                                <input type="text" class="form-control" id="login" name="login">
+                            </div>
+                            <div class="form-group">
+                            	<label for="senha" class="control-label">Data:</label><br>
+                                <input type="text" id="datepicker">
+    
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id" id="id">
@@ -147,9 +129,9 @@
     
 	</article>		
 	
-	<footer>
-		<div w3-include-html="rodape.html"></div> 
-	</footer>
+    <?php
+        include 'rodape.html';
+    ?>
 	
 </body>
 
