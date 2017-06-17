@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login EasyRights</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="../css/jumbotron-narrow.css" rel="stylesheet">
+
+		<script src="../js/jquery-1.11.2.min.js"></script>
+	    <script src="../js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<header>
+			<?php
+	       		include 'menuLogin.html';
+	    	?> 
+	 	</header>
+		
+		<article >
+			<header style="text-align:center; padding-top: 15px;">
+		    	<font style="font-size: 18px; "> 	Seja bem-vindo ao Sistema de Gerenciamento do EasyRights </font>
+	  		</header>
+	  		<div class="wrapper" style="max-width: 330px; margin: 0 auto; padding-top: 15px;">
+				<form method="POST" >
+					Login<br>
+					<input type="text" name="login"  class="form-control" autofocus>
+					Senha<br>
+					<input type="password" name="senha" class="form-control" >
+					<br><br>
+					<button type="submit" class="btn btn-primary" value="efetuarLogin" name="action" formaction="relatorios.php">Login </button>
+					<button type="submit" class="btn btn-default" formaction="../index.php" >Cancelar</button>
+				</form> 
+			</div>
+		</article>	
+
+		<footer>
+			<br>
+			<?php
+	       		include 'rodape.html';
+	    	?> 
+		</footer>
+
+	</body>
+</html>
