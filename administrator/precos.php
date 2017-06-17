@@ -4,26 +4,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EasyRights Adiministração - Preços</title>
-
-    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
     
-    <script src="../js/jquery-1.11.2.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.js" integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<!-- Bootstrap Date-Picker Plugin -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-
-
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 <body>
@@ -94,33 +79,57 @@
         </div>
 		
         <div class="modal fade" id="modalInserir" tabindex="-1" role="dialog" aria-labelledby="modalEditar" data-backdrop="static" aria-hidden="true">
-          <div class="modal-dialog">
-                <form id="formInserirUsuario" formmethod="post">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="modalTitulo">Novo plano</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="nome" class="control-label">Nome:</label>
-                                <input type="text" class="form-control" id="nome" name="nome">
+              <div class="modal-dialog">
+                    <form id="formInserirUsuario" formmethod="post">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="modalTitulo">Novo usuário</h4>
                             </div>
-                            <div class="form-group">
-                                <label for="instituicao" class="control-label">Preço:</label>
-                                <input type="text" class="form-control" id="instituicao" name="instituicao">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="nome" class="control-label">Pet:</label>
+                                    <input type="text" required class="form-control" id="nome" name="nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instituicao" class="control-label">Instituição:</label>
+                                    <input type="text" required class="form-control" id="instituicao" name="instituicao">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="control-label">E-mail:</label>
+                                    <input type="email" required class="form-control" id="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="perfil" class="control-label">Perfil:</label>
+                                    <select  required class="form-control" id="perfil" name="perfil">
+                                        <option value="pet">Pet</option>
+                                        <option value="administrador">Administrador</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url" class="control-label">Url:</label>
+                                    <input type="url" required class="form-control" id="url" name="url">
+                                </div>
+                                <div class="form-group">
+                                    <label for="login" class="control-label">Login:</label>
+                                    <input type="text" required class="form-control" id="login" name="login">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha" class="control-label">Senha:</label>
+                                    <input type="password" required class="form-control" id="senha" name="senha" placeholder="Informe uma nova senha">
+                                </div>
+                             </div>
+                             
+                            <div class="modal-footer">
+                                <input type="hidden" name="id" id="id" >                          
+                                <input type="hidden" name="retorno" id="retorno" value="<?php echo $retorno ?>">
+                                <button type="submit" class="btn btn-primary" formaction="controleUsuario.php" name='action' id="salvar" value='inserirUsuario' formmethod="POST" form="formInserirUsuario">Salvar</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             </div>
-                            
                         </div>
-                        <div class="modal-footer">
-                            <input type="hidden" name="id" id="id">
-                            <button type="submit" class="btn btn-primary" formaction="Controle.php" name='action' id="salvar" value='inserirUsuario' formmethod="POST" form="formInserirUsuario">Salvar</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        </div>
-                    </div>
-                </form>
-          </div>
-        </div>		
+                    </form>
+              </div>
+            </div>              	
         <div class="modal fade bs-example-modal-sm" id="modalRemover" tabindex="-1" role="dialog" aria-labelledby="modalRemover" aria-hidden="true">
           <div class="modal-dialog modal-sm">
                 <div class="modal-content">
@@ -152,10 +161,6 @@
 	
 </body>
 
-
-<script>
-w3IncludeHTML();
-</script>
 <script type="text/javascript">
 	       
         $('#modalInserir').on('show.bs.modal', function (event) {
@@ -203,12 +208,9 @@ w3IncludeHTML();
             id.value = idBotao;
             
             var mensagem = document.getElementById('mensagemConfirmacaoRemover');
-            mensagem.innerHTML = "Realmente deseja remover o usuário <strong>" + button.data('nome') + "</strong>?";
+            mensagem.innerHTML = "Realmente deseja remover o preço <strong>" + button.data('nome') + "</strong>?";
         })         
 
-            $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii"
-    });
     </script>
 
 </html>	
