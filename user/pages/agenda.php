@@ -16,9 +16,7 @@
         YUI({ 
             lang:'pt-BR',
             filter: 'raw' }).use('aui-scheduler', 'translator', function(Y) {
-
-                
-                
+            
             var items = [
                 {
                     content: 'III Escola Regional de Informática do Piauí – ERIPI',
@@ -48,9 +46,9 @@
 
             
             var schedulerViews = [
-                new Y.SchedulerWeekView(),
-                new Y.SchedulerDayView(),
-                new Y.SchedulerMonthView(),
+                new Y.SchedulerMonthView({name:'Mês'}),
+                new Y.SchedulerWeekView({name:'Semana'}),
+                new Y.SchedulerDayView({name:'Dia'}),
                 new Y.SchedulerAgendaView()
             ];
 
@@ -58,9 +56,9 @@
                 boundingBox: '#scheduler',
                 items: items,
                 views: schedulerViews,
-                activeView: schedulerViews[2],
-                eventRecorder: new Y.SchedulerEventRecorder()
-                // firstDayOfWeek: 1,
+                activeView: schedulerViews[0],
+                eventRecorder: new Y.SchedulerEventRecorder(),
+                firstDayOfWeek: 1,  
                 // activeView: weekView,
                 // views: [dayView, weekView, monthView, agendaView]
             }).render();
@@ -87,20 +85,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-
-    <!-- Bootstrap Date-Picker Plugin -->
-    
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>-->
-    
-
-    <script>
-        $( function() {
-            $( ".datepicker" ).datepicker({});
-        } );
-    </script>
-
 </body>
 
 </html>
