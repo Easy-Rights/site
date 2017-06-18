@@ -36,7 +36,19 @@
             <div class="panel-body">
                 <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label>Mostrar <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-6 text-right"><div id="dataTables-example_filter" class="dataTables_filter"><label>Pesquisar:<input class="form-control input-sm" placeholder="" aria-controls="dataTables-example" type="search"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info" style="width: 100%;" width="100%">
                     <thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 175px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Tipo</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 205px;" aria-label="Browser: activate to sort column ascending">Data</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 187px;" aria-label="Platform(s): activate to sort column ascending">Descrição</th>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 175px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">
+                                Tipo
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 205px;" aria-label="Browser: activate to sort column ascending">
+                                Data
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 187px;" aria-label="Platform(s): activate to sort column ascending">
+                                Descrição
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: 60px;" aria-label="Platform(s): activate to sort column ascending">
+                                Ações
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,16 +56,25 @@
                             <td class="sorting_1">Imagem</td>
                             <td>16/12/2016</td>
                             <td>Foto do Processo</td>
+                            <td>
+                                <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-search" type="submit" title="Visualizar andamento" aria-hidden="true" data-toggle="modal" data-target="#modalInserir" data-id='22'></button> 
+                            </td>
                         </tr>
                         <tr class="gradeA even" role="row">
                             <td class="sorting_1">PDF</td>
                             <td>16/12/2016</td>
                             <td>Documento Importado</td>
+                            <td>
+                                <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-search" type="submit" title="Visualizar andamento" aria-hidden="true" data-toggle="modal" data-target="#modalInserir" data-id='22'></button> 
+                            </td>
                         </tr>
                         <tr class="gradeA odd" role="row">
                             <td class="sorting_1">Texto</td>
                             <td>16/12/2016</td>
                             <td>Andamento Processual 01</td>
+                            <td>
+                                <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-search" type="submit" title="Visualizar andamento" aria-hidden="true" data-toggle="modal" data-target="#modalInserir" data-id='22'></button> 
+                            </td>
                         </tr>
                     </tbody>
                 </table></div></div><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">Mostrando 3 de 3 dos 3 registros</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#">Anterior</a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">1</a><li class="paginate_button next disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#">Próximo</a></li></ul></div></div></div></div>
@@ -97,3 +118,4 @@
 </body>
 
 </html>
+    

@@ -30,7 +30,7 @@
                                 </li>
                                 <li>
                                     <!--<a href="morris.html">Morris.js Charts</a> -->
-                                    <a href="#"><i class="fa fa-users fa-fw"> </i>  Contatos </a>
+                                    <a href="cadastroContato.php"><i class="fa fa-users fa-fw"> </i>  Contatos </a>
                                 </li>
                                 <li>
                                     <a href="#"> <i class="fa fa-calculator fa-fw"></i> Contas financeiras</a>
@@ -52,7 +52,7 @@
                                     <a href="agenda.php"><i class="fa fa-calendar fa-fw"> </i>  Agenda de compromissos </a>
                                 </li>
                                 <li> <!-- fa-fw para manter tamanho do icone-->
-                                    <a href="#"> <i class="fa fa-phone  fa-fw"> </i> Agenda de Contatos </a>
+                                    <a href="agendaContato.php"> <i class="fa fa-phone  fa-fw"> </i> Agenda de Contatos </a>
                                 </li>
                             </ul>
                         </li>
