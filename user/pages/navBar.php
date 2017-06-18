@@ -60,13 +60,13 @@
                             <a href="#">Financeiro<span class="fa arrow"></span> </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                   <a href="#"> <i class="fa fa-long-arrow-left  fa-fw"></i> Contas a receber </a>
+                                   <a href="contaReceber.php"> <i class="fa fa-long-arrow-left  fa-fw"></i> Contas a receber </a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-long-arrow-right  fa-fw"> </i>  Contas a pagar </a>
+                                    <a href="contaPagar.php"><i class="fa fa-long-arrow-right  fa-fw"> </i>  Contas a pagar </a>
                                 </li>
                                 <li> <!-- fa-fw para manter tamanho do icone-->
-                                    <a href="#"> <i class="fa fa-exchange fa-fw"> </i> Movimentação financeira </a>
+                                    <a href="movimentacaoFinanceira.php"> <i class="fa fa-exchange fa-fw"> </i> Movimentação financeira </a>
                                 </li>
                             </ul>
                         </li>
