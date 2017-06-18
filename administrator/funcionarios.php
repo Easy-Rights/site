@@ -4,17 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyRights Adiministração - Funcionários</title>
-
-    <script src="https://code.jquery.com/jquery-1.11.2.js" integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 </head>
 <body>
-    <?php
-       include 'menuSistema.html';
-    ?>
+    <header>
+        <?php
+            $menu = "Funcionarios";
+            include 'menuSistema.php';
+        ?>
+    </header>
     
     <article>
         <div class="container theme-showcase" role="main">
@@ -41,7 +39,7 @@
                                 <td>Desenvolvedor</td>         
                                 <td> 
                                     <button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar funcionário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir"></button> 
-                                    <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover funcionário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="" data-id=""></button>
+                                    <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover funcionário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="Vítor Godeiro" data-id=""></button>
                                 </td>
                             </tr>
   
@@ -59,38 +57,27 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="nome" class="control-label">Pet:</label>
+                                    <label for="nome" class="control-label">Nome:</label>
                                     <input type="text" required class="form-control" id="nome" name="nome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="instituicao" class="control-label">Instituição:</label>
-                                    <input type="text" required class="form-control" id="instituicao" name="instituicao">
+                                    <label for="cpf" class="control-label">CPF:</label>
+                                    <input type="text" required class="form-control" id="cpf" name="cpf">
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="control-label">E-mail:</label>
                                     <input type="email" required class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="perfil" class="control-label">Perfil:</label>
-                                    <select  required class="form-control" id="perfil" name="perfil">
-                                        <option value="pet">Pet</option>
-                                        <option value="administrador">Administrador</option>
+                                    <label for="cargo" class="control-label">Cargo:</label>
+                                    <select  required class="form-control" id="cargo" name="cargo">
+                                        <option value="Estagiário">Estagiário</option>
+                                        <option value="Desenvolvedor">Desenvolvedor</option>
+                                        <option value="UX">UX</option>
+                                        <option value="UX">Gerente</option>
                                   </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="url" class="control-label">Url:</label>
-                                    <input type="url" required class="form-control" id="url" name="url">
-                                </div>
-                                <div class="form-group">
-                                    <label for="login" class="control-label">Login:</label>
-                                    <input type="text" required class="form-control" id="login" name="login">
-                                </div>
-                                <div class="form-group">
-                                    <label for="senha" class="control-label">Senha:</label>
-                                    <input type="password" required class="form-control" id="senha" name="senha" placeholder="Informe uma nova senha">
-                                </div>
                              </div>
-                             
                             <div class="modal-footer">
                                 <input type="hidden" name="id" id="id" >                          
                                 <input type="hidden" name="retorno" id="retorno" value="<?php echo $retorno ?>">
@@ -126,11 +113,17 @@
     
     </article>      
     
-    <?php
-       include 'rodape.html';
-    ?>
+    <footer>
+        <?php
+            include 'rodape.php';
+        ?>
+    </footer>
     
 </body>
+
+<!-- SCRIPT -->
+<script src="https://code.jquery.com/jquery-1.11.2.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
            
@@ -140,10 +133,9 @@
             var titulo = document.getElementById("modalTitulo");
             var identificador = document.getElementById("id");
             var nome = document.getElementById("nome");
-            var instituicao = document.getElementById("instituicao");
+            var cpf = document.getElementById("cpf");
             var email = document.getElementById("email");
-            var login = document.getElementById("login");
-            var senha = document.getElementById("senha");
+            var cargo = document.getElementById("cargo");
             var salvar = document.getElementById("salvar");
             
             if (botao[0].id == "botaoIncluir")
@@ -151,10 +143,9 @@
                 titulo.innerHTML = "Novo funcionário";
                 identificador.value = "";
                 nome.value = "";
-                instituicao.value = "";
+                cpf.value = "";
                 email.value = "";
-                login.value = "";
-                senha.value = "";
+                cargo.value = "Estagiário";
                 salvar.value = "inserirUsuario";
             }
             else // Botão Editar
@@ -164,10 +155,9 @@
                 titulo.innerHTML = "Editar funcionário";
                 identificador.value = botao.data('id');
                 nome.value = td[1].innerText;
-                login.value = td[2].innerText;
+                cpf.value = td[2].innerText;
                 email.value = td[3].innerText;
-                instituicao.value = td[4].innerText;
-                senha.value = "";
+                cargo.value = td[4].innerText;
                 salvar.value = "editarExemplar";
             }           
         });
@@ -180,11 +170,7 @@
             
             var mensagem = document.getElementById('mensagemConfirmacaoRemover');
             mensagem.innerHTML = "Realmente deseja remover o funcionário <strong>" + button.data('nome') + "</strong>?";
-        })         
-
-            $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii"
-    });
+        });
     </script>
 
 </html> 

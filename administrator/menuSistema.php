@@ -3,11 +3,11 @@
     
         <div class="container">
             <ul class="nav nav-pills pull-left" >
-                <li role="presentation" ><a href="relatorios.php">Relatórios</a></li>
-                <li role="presentation" ><a href="precos.php">Preços</a></li>
-                <li role="presentation" ><a href="rendimentos.php">Rendimentos</a></li>
-                <li role="presentation" ><a href="funcionarios.php">Funcionários</a></li>
-                <li role="presentation" ><a href="usuarios.php">Usuários</a></li>
+                <li role="presentation" <?php if ($menu == 'Relatorio') echo "class='active'";?> ><a href="relatorios.php">Relatórios</a></li>
+                <li role="presentation" <?php if ($menu == 'Precos') echo "class='active'";?> ><a href="precos.php">Preços</a></li>
+                <li role="presentation" <?php if ($menu == 'Rendimentos') echo "class='active'";?> ><a href="rendimentos.php">Rendimentos</a></li>
+                <li role="presentation" <?php if ($menu == 'Funcionarios') echo "class='active'";?> ><a href="funcionarios.php">Funcionários</a></li>
+                <li role="presentation" <?php if ($menu == 'Usuarios') echo "class='active'";?> ><a href="usuarios.php">Usuários</a></li>
             </ul>
             <ul class="nav nav-pills pull-right" >
                 <li class="dropdown " >

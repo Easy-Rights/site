@@ -15,7 +15,7 @@
 
 		<header>
 			<?php
-	       		include 'menuLogin.html';
+	       		include 'menuLogin.php';
 	    	?> 
 	 	</header>
 		
@@ -39,7 +39,7 @@
 		<footer>
 			<br>
 			<?php
-	       		include 'rodape.html';
+	       		include 'rodape.php';
 	    	?> 
 		</footer>
 
