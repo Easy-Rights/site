@@ -13,7 +13,7 @@
 
   <header>
     <?php 
-        include 'menuLogin.html';
+        include 'menuLogin.php';
     ?> 
     
   </header>

@@ -13,46 +13,40 @@
         <div id="scheduler"></div>
     
         <script>
-        YUI({ filter: 'raw' }).use('aui-scheduler', function(Y) {
+        YUI({ 
+            lang:'pt-BR',
+            filter: 'raw' }).use('aui-scheduler', 'translator', function(Y) {
 
+                
+                
             var items = [
                 {
-                    content: 'Review or (even better) Rewrite Your Goals',
-                    startDate: new Date(2013, 1, 4, 12),
-                    endDate: new Date(2013, 1, 4, 16)
+                    content: 'III Escola Regional de Informática do Piauí – ERIPI',
+                    startDate: new Date(2017, 5, 12),
+                    endDate: new Date(2017, 5, 14),
+                    allDay: true
                 },
                 {   
-                    content: 'Event 1',
-                    startDate: new Date(2014, 6, 4),
-                    endDate: new Date(2014, 6, 20),
+                    content: '10ª Semana Acadêmica de Computação - SEACOMP 2017',
+                    startDate: new Date(2017, 5, 19),
+                    endDate: new Date(2017, 5, 23),
                     allDay: true
                 },
                 {
-                    content: 'Event 2',
-                    startDate: new Date(2014, 6, 4),
-                    endDate: new Date(2014, 6, 20),
+                    content: 'XXXVII Congresso da Sociedade Brasileira de Computação - CSBC',
+                    startDate: new Date(2017, 6, 2),
+                    endDate: new Date(2017, 6, 6),
                     allDay: true
                 },
                 {
-                    content: 'Event 3',
-                    startDate: new Date(2014, 6, 4),
-                    endDate: new Date(2014, 6, 20),
+                    content: 'IEEE International Summer School on Smart Cities - S3C 2017',
+                    startDate: new Date(2017, 7, 6),
+                    endDate: new Date(2017, 7, 11),
                     allDay: true
                 },
-                {
-                    content: 'Other event',
-                    startDate: new Date(2014, 6, 20),
-                    endDate: new Date(2014, 6, 22),
-                    allDay: true
-                },
-                {
-                    content: 'Other event 2',
-                    startDate: new Date(2014, 6, 23),
-                    endDate: new Date(2014, 6, 28),
-                    allDay: true
-                }
             ];
 
+            
             var schedulerViews = [
                 new Y.SchedulerWeekView(),
                 new Y.SchedulerDayView(),
@@ -95,12 +89,15 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Bootstrap Date-Picker Plugin -->
+    
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>-->
+    
 
     <script>
         $( function() {
-            $( ".datepicker" ).datepicker();
+            $( ".datepicker" ).datepicker({});
         } );
     </script>
 

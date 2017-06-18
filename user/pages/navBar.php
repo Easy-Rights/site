@@ -3,7 +3,7 @@
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Buscar...">
                                 <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
@@ -47,7 +47,7 @@
                                    <a href="andProcessual.php"> <i class="fa fa-building fa-fw"></i> Andamento Processual </a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-users fa-fw"> </i>  Agenda de compromissos </a>
+                                    <a href="agenda.php"><i class="fa fa-users fa-fw"> </i>  Agenda de compromissos </a>
                                 </li>
                                 <li> <!-- fa-fw para manter tamanho do icone-->
                                     <a href="#"> <i class="fa fa-user fa-fw"> </i> Contatos </a>

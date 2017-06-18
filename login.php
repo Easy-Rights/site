@@ -31,7 +31,7 @@
     <header>
     <?php 
     if(session_status() != PHP_SESSION_ACTIVE) session_start();
-        include 'administrator/menuLogin.html';
+        include 'administrator/menuLogin.php';
     ?> 
     </header>
 
