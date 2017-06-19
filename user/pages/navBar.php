@@ -18,10 +18,10 @@
                         <li>
                             <a href="#">Cadastro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                   <!-- <a href="flot.html">Flot Charts</a> -->
+                                <!--<li>
+                                   <!-- <a href="flot.html">Flot Charts</a> 
                                    <a href="#"> <i class="fa fa-building fa-fw"> </i> Escritório </a>
-                                </li>
+                                </li>-->
                                 <li> <!-- fa-fw para manter tamanho do icone-->
                                     <a href="clientes.php"> <i class="fa fa-user fa-fw"> </i> Clientes </a>
                                 </li>
@@ -33,12 +33,13 @@
                                     <a href="cadastroContato.php"><i class="fa fa-users fa-fw"> </i>  Contatos </a>
                                 </li>
                                 <li>
-                                    <a href="#"> <i class="fa fa-calculator fa-fw"></i> Contas financeiras</a>
+                                    <a href="cadastroConta.php"> <i class="fa fa-calculator fa-fw"></i> Contas financeiras</a>
                                 </li>
+                                <!--
                                 <li>
                                     <a href="#"> <i class="fa fa-pencil-square-o  fa-fw"></i> Modelos de processos </a>
                                 </li>
-
+                                    -->
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -92,3 +93,4 @@
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
+            

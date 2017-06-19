@@ -146,3 +146,5 @@
             -->
             <?php include('navBar.php');?>
         </nav>
+        </div>
+        

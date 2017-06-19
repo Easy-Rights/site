@@ -18,13 +18,13 @@
                                     <i class="fa fa-group fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right ">
-                                    <div class="huge">1599</div>
+                                    <div class="huge">3</div>
                                     <div>Clientes </div><div> cadastrados</div>
                                 </div>
                                 
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="clientesCadastrados.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="clientes.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -65,12 +65,12 @@
                                     <i class="fa fa-briefcase fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge">3</div>
                                     <div>Processos </div><div> cadastrados</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="processosCadastrados.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="processos.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -112,12 +112,12 @@
                                     <i class="fa fa-calendar fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">1596</div>
+                                    <div class="huge">3</div>
                                     <div>Compromissos </div><div> cadastrados</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="agenda.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="agenda.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -160,12 +160,12 @@
                                     <i class="fa fa-phone fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">1981</div>
+                                    <div class="huge">3</div>
                                     <div>Contatos </div><div> cadastrados</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="agendaContato.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -188,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="cadastroContato.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -209,12 +209,12 @@
                                     <i class="glyphicon glyphicon-copy fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">1981</div>
+                                    <div class="huge">3</div>
                                     <div>Contas a receber </div><div> cadastradas</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="contaReceber.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -237,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="cadastroConta.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -256,12 +256,12 @@
                                     <i class="glyphicon glyphicon-paste fa-4x opacidade"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">1981</div>
+                                    <div class="huge">3</div>
                                     <div>Contas a pagar </div><div> cadastradas</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="contaPagar.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Acessar</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
@@ -284,7 +284,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="cadastroConta.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Novo</span>
                                 <span class="pull-right"><i class="fa fa-plus-circle"></i></span>
