@@ -40,15 +40,15 @@ function validaUsuario($usuario, $senha) {
   $nusuario = addslashes($usuario);
   $nsenha = addslashes($senha);
   // Monta uma consulta SQL (query) para procurar um usuário
-  $sql = "SELECT `id`, `login` FROM `".$_SG['tabela']."` WHERE ".$cS." `login` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
-  echo $sql;
+  $sql = "SELECT `id`, `login`, `perfil` FROM `".$_SG['tabela']."` WHERE ".$cS." `login` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
   $query = mysqli_query($_SG['link'],$sql);
   $resultado = mysqli_fetch_assoc($query);
   // Verifica se encontrou algum registro
-  if (empty($resultado)) {
+  if (empty($resultado) || $resultado['perfil'] == 'Cliente') {
     // Nenhum registro foi encontrado => o usuário é inválido
     return false;
   } else {
+    echo $resultado['perfil'];
     // Definimos dois valores na sessão com os dados do usuário
     $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
     $_SESSION['usuarioNome'] = $resultado['login']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL

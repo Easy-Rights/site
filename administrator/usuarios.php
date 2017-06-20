@@ -43,6 +43,7 @@
                   foreach ($usuarios as $usuario)
                   {
                       $acoes = "  <td>
+                      <button id='' class='btn btn-default btn-sm glyphicon glyphicon-eye-open' type='' title='Visualizar usuário {$usuario['nome']}' aria-hidden='true' '></button>
                       <button id='botaoEditar' class='btn btn-default btn-sm glyphicon glyphicon-pencil' type='submit' title='Editar usuário {$usuario['nome']}' aria-hidden='true' data-toggle='modal' data-target='#modalInserir' data-id='{$usuario['id']}'></button>
                       <button class='btn btn-default btn-sm glyphicon glyphicon-remove' type='submit' title='Remover usuário {$usuario['nome']}' aria-hidden='true' data-toggle='modal' data-target='#modalRemover' data-nome='{$usuario['nome']}' data-id='{$usuario['id']}'></button>
                                     </td>";
