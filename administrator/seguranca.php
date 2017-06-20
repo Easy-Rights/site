@@ -1,15 +1,5 @@
 <?php
-/**
-* Sistema de segurança com acesso restrito
-*
-* Usado para restringir o acesso de certas páginas do seu site
-*
-* @author Thiago Belem <contato@thiagobelem.net>
-* @link http://thiagobelem.net/
-*
-* @version 1.0
-* @package SistemaSeguranca
-*/
+
 //  Configurações do Script
 // ==============================
 $_SG['conectaServidor'] = true;    // Abre uma conexão com o servidor MySQL?
@@ -20,7 +10,7 @@ $_SG['validaSempre'] = true;       // Deseja validar o usuário e a senha a cada
 $_SG['servidor'] = 'localhost';    // Servidor MySQL
 $_SG['usuario'] = 'root';          // Usuário MySQL
 $_SG['senha'] = '';                // Senha MySQL
-$_SG['banco'] = 'easyrights';            // Banco de dados MySQL
+$_SG['banco'] = 'easyRights';            // Banco de dados MySQL
 $_SG['paginaLogin'] = 'login.php'; // Página de login
 $_SG['tabela'] = 'usuarios';       // Nome da tabela onde os usuários são salvos
 // ==============================
@@ -50,7 +40,8 @@ function validaUsuario($usuario, $senha) {
   $nusuario = addslashes($usuario);
   $nsenha = addslashes($senha);
   // Monta uma consulta SQL (query) para procurar um usuário
-  $sql = "SELECT `id`, `usuario` FROM `".$_SG['tabela']."` WHERE ".$cS." `usuario` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
+  $sql = "SELECT `id`, `login` FROM `".$_SG['tabela']."` WHERE ".$cS." `login` = '".$nusuario."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
+  echo $sql;
   $query = mysqli_query($_SG['link'],$sql);
   $resultado = mysqli_fetch_assoc($query);
   // Verifica se encontrou algum registro
@@ -60,7 +51,7 @@ function validaUsuario($usuario, $senha) {
   } else {
     // Definimos dois valores na sessão com os dados do usuário
     $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
-    $_SESSION['usuarioNome'] = $resultado['usuario']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+    $_SESSION['usuarioNome'] = $resultado['login']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
     // Verifica a opção se sempre validar o login
     if ($_SG['validaSempre'] == true) {
       // Definimos dois valores na sessão com os dados do login

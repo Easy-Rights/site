@@ -1,3 +1,8 @@
+<?php
+  include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
+  protegePagina(); // Chama a função que protege a página
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -12,6 +17,8 @@
     <?php
   	   $menu = 'Usuarios';
        include 'menuSistema.php';
+       require_once('usuario.php');
+       $usuarios = Usuario::usuarios();
    ?>
     
     <div class="container theme-showcase" role="main">
@@ -31,22 +38,30 @@
                			<th>ações</th>
                		</tr>
            		</thead>
-           		<tbody>
-                   	<tr>
-                       	<th scope="row">1</th>
-                   		<td>Vítor Godeiro</td>
-                        <td>vitor</td>
-                        <td>Administrador</td>
-                   		<td>074.467.314-35</td>
-                   		<td>vitorgodeiro@live.com</td>
-                   		<td>Escritório Justiça</td>			
-	                    <td> 
-	                       	<!--<button id="botaoVisualizar" class="btn btn-default btn-sm glyphicon glyphicon-eye-open" title="Visualizar informações do usuário" aria-hidden="true" ></button>-->	
-                           	<button id="botaoEditar" class="btn btn-default btn-sm glyphicon glyphicon-pencil" type="submit" title="Editar usuário" aria-hidden="true" data-toggle="modal" data-target="#modalInserir" data-id='22'></button> 
-                            <button class="btn btn-default btn-sm glyphicon glyphicon-remove" type="submit" title="Remover usuário" aria-hidden="true" data-toggle="modal" data-target="#modalRemover" data-nome="Vítor Godeiro" data-id='22'></button>
-                  		</td>
-              		</tr>
-                </tbody>
+           		<?php
+                  $i = 1;
+                  foreach ($usuarios as $usuario)
+                  {
+                      $acoes = "  <td>
+                      <button id='botaoEditar' class='btn btn-default btn-sm glyphicon glyphicon-pencil' type='submit' title='Editar usuário {$usuario['nome']}' aria-hidden='true' data-toggle='modal' data-target='#modalInserir' data-id='{$usuario['id']}'></button>
+                      <button class='btn btn-default btn-sm glyphicon glyphicon-remove' type='submit' title='Remover usuário {$usuario['nome']}' aria-hidden='true' data-toggle='modal' data-target='#modalRemover' data-nome='{$usuario['nome']}' data-id='{$usuario['id']}'></button>
+                                    </td>";
+                              
+echo <<<END
+                  <tr>
+                <th scope="row">{$i}</th>
+                            <td>{$usuario['nome']}</td>
+                              <td>{$usuario['login']}</td>
+                              <td>{$usuario['perfil']}</td> 
+                              <td>{$usuario['documento']}</td>  
+                              <td>{$usuario['email']}</td>
+                              <td>{$usuario['instituicao']}</td>
+                              {$acoes}
+                          </tr>
+END;
+                $i++;
+                            }   
+                    ?>  
             </table>  
         </div>
     </div>
@@ -178,7 +193,7 @@
                 email.value = td[5].innerText;
                 instituicao.value = td[6].innerText;
                 senha.value = "";
-                salvar.value = "editarExemplar";
+                salvar.value = "editarUsuario";
             }           
         });
         

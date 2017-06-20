@@ -24,13 +24,13 @@
 		    	<font style="font-size: 18px; "> 	Seja bem-vindo ao Sistema de Gerenciamento do EasyRights </font>
 	  		</header>
 	  		<div class="wrapper" style="max-width: 330px; margin: 0 auto; padding-top: 15px;">
-				<form method="POST" >
+				<form method="post" action="valida.php">
 					Login<br>
-					<input type="text" name="login"  class="form-control" autofocus>
+					<input type="text" name="usuario"  class="form-control" autofocus>
 					Senha<br>
 					<input type="password" name="senha" class="form-control" >
 					<br><br>
-					<button type="submit" class="btn btn-primary" value="efetuarLogin" name="action" formaction="relatorios.php">Login </button>
+					<input type="submit" value="Entrar" class="btn btn-md btn-primary" />
 					<button type="submit" class="btn btn-default" formaction="../index.php" >Cancelar</button>
 				</form> 
 			</div>

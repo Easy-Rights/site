@@ -11,9 +11,9 @@
             </ul>
             <ul class="nav nav-pills pull-right" >
                 <li class="dropdown " >
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp Vítor Godeiro <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo "Olá, " . $_SESSION['usuarioNome']; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="../index.php">Sair</a></li>
+                        <li><a href="logout.php">Sair</a></li>
                         <li><a href="#">Editar</a></li>
                     </ul>
                 </li>

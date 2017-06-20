@@ -1,6 +1,6 @@
 <?php
 
-define ( 'BD_Usuario', 'petsrn2016' );
+define ( 'BD_Usuario', 'easyRights' );
 
 
 function BD_AbreConexao($database) {
