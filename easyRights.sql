@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 20-Jun-2017 às 04:13
+-- Generation Time: 21-Jun-2017 às 04:33
 -- Versão do servidor: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -42,8 +42,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `login`, `senha`, `nome`, `instituicao`, `email`, `perfil`, `documento`) VALUES
-(1, 'vitor', '123', 'vitor Godeiro', 'UFRN', 'vitorgodeiro@live.com', 'Administrador', 'asd'),
-(5, 'teste', 'teste', 'teste', 'teste', 'teste@gmail.com', 'Cliente', 'teste');
+(1, 'vitor', '123', 'vitor Godeiro', 'UFRN', 'vitorgodeiro@live.com', 'Administrador', '074'),
+(6, 'teste', 'teste', 'teste', 'teste', 'teste@gmail.com', 'Cliente', 'teste');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +63,28 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Metadata
+--
+USE `phpmyadmin`;
+
+--
+-- Metadata for usuarios
+--
+
+--
+-- Extraindo dados da tabela `pma__table_uiprefs`
+--
+
+INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, `last_update`) VALUES
+('root', 'easyRights', 'usuarios', '{"sorted_col":"`usuarios`.`perfil`  DESC"}', '2017-06-20 02:19:42');
+
+--
+-- Metadata for easyRights
+--
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
