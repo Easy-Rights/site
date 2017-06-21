@@ -60,7 +60,7 @@
                     </div>
                 
                     <button type="submit" id="btnAjax"  class="btn btn-primary"> Cadastrar</button>
-                    <a class="btn btn-default" href="../index.php" >Cancelar</a>
+                    <a class="btn btn-default" href="index.php" >Cancelar</a>
                 </form>
 
 
